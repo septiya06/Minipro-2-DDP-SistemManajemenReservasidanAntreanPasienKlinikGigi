@@ -16,6 +16,106 @@ Program ini menggunakan Dictionary untuk menyimpan data akun dan data pasien, Fu
 
 # GAMBAR FLOWCHART SERTA PENJELASAN ALURNYA
 
+> <img width="1224" height="1285" alt="flowchart" src="https://github.com/user-attachments/assets/ee38fede-48bf-4a53-9b93-2ff11b0cd723" />
+
+# PENJELASAN ALUR FLOWCHART
+
+Berdasarkan flowchart program, alurnya dimulai dari **Mulai → Menu Utama → Login sesuai pilihan → Menu sesuai akses → Proses data → Kembali ke menu atau selesai**.<br>
+
+## Penjelasan Alur Flowchart
+
+1. **Mulai**<br>
+   Program dimulai dari bagian Mulai, kemudian program menampilkan **Menu Utama** yang memiliki tiga pilihan:<br>
+   * 1. Admin<br>
+   * 2. User<br>
+   * 3. Keluar<br>
+
+2. **Input Pilihan Menu Utama**<br>
+   Pengguna memasukkan pilihan dari menu utama. Program kemudian mengecek pilihan yang dimasukkan menggunakan percabangan.<br>
+
+3. **Pilihan 1 – Admin**<br>
+   Jika pengguna memilih **1**, program akan mengarahkan ke bagian **Login Admin**. Pengguna diminta memasukkan username dan password.<br>
+
+   * Jika username tidak sesuai → program menampilkan pesan bahwa username atau password salah dan meminta pengguna mencoba lagi.<br>
+   * Jika username sesuai → program akan mengecek password.<br>
+   * Jika password tidak sesuai → program menampilkan pesan bahwa username atau password salah dan meminta pengguna mencoba lagi.<br>
+   * Jika username dan password benar serta aksesnya sesuai sebagai admin → program menampilkan pesan **Login berhasil!** dan pengguna masuk ke **Menu Admin**.<br>
+
+4. **Pilihan 2 – User**<br>
+   Jika pengguna memilih **2**, program akan mengarahkan ke bagian **Login User**. Pengguna diminta memasukkan username dan password.<br>
+
+   * Jika username tidak sesuai → program menampilkan pesan bahwa username atau password salah dan meminta pengguna mencoba lagi.<br>
+   * Jika username sesuai → program akan mengecek password.<br>
+   * Jika password tidak sesuai → program menampilkan pesan bahwa username atau password salah dan meminta pengguna mencoba lagi.<br>
+   * Jika username dan password benar serta aksesnya sesuai sebagai user → program menampilkan pesan **Login berhasil!** dan pengguna masuk ke **Menu User**.<br>
+
+5. **Pilihan 3 – Keluar**<br>
+   Jika pengguna memilih **3**, program menampilkan bagian keluar dan pesan terima kasih. Setelah itu program selesai.<br>
+
+6. **Pilihan Tidak Valid**<br>
+   Jika pengguna memasukkan pilihan selain **1, 2, atau 3**, program menampilkan pesan **Pilihan tidak valid. Silakan pilih antara 1-3.** Kemudian program kembali ke Menu Utama agar pengguna dapat memasukkan pilihan lagi.<br>
+
+## Alur Menu Admin
+
+Setelah admin berhasil login, program akan menampilkan **Menu Admin** yang memiliki lima pilihan:<br>
+
+1. **Tambah Data Reservasi Pasien**<br>
+   Admin memasukkan data pasien berupa nama, nomor HP, keluhan, hari/tanggal, dan jam. Jika semua kolom sudah diisi, data pasien akan disimpan dan program kembali ke Menu Admin.<br>
+
+   Jika ada kolom yang belum diisi, program menampilkan pesan **Data tidak Tersimpan! Semua kolom input harus diisi.** Kemudian program kembali ke Menu Admin.<br>
+
+2. **Lihat Data Reservasi Pasien**<br>
+   Program mengambil data pasien yang sudah tersimpan kemudian mengurutkannya berdasarkan hari/tanggal dan jam. Setelah itu data ditampilkan dalam bentuk tabel menggunakan PrettyTable. Setelah selesai melihat data, admin kembali ke Menu Admin.<br>
+
+3. **Ubah Jadwal Reservasi Pasien**<br>
+   Admin dapat memilih cara mencari data pasien yang ingin diubah, yaitu:<br>
+
+   * Nomor Antrean<br>
+   * Nama Pasien<br>
+   * Nomor HP<br>
+   * Kembali<br>
+
+   Setelah data pasien ditemukan, admin memasukkan hari/tanggal baru dan jam baru. Jika data jadwal sudah diisi, jadwal pasien akan diubah dan program kembali ke Menu Admin.<br>
+
+   Jika data pasien tidak ditemukan, program menampilkan pesan bahwa data pasien tidak ditemukan.<br>
+
+4. **Hapus Data Reservasi Pasien**<br>
+   Admin dapat memilih cara mencari data pasien yang ingin dihapus, yaitu:<br>
+
+   * Nomor Antrean<br>
+   * Nama Pasien<br>
+   * Nomor HP<br>
+   * Kembali<br>
+
+   Setelah data pasien ditemukan, data pasien akan dihapus dari data pasien dan program menampilkan pesan bahwa data pasien berhasil dihapus.<br>
+
+   Jika data pasien tidak ditemukan, program menampilkan pesan bahwa data pasien tidak ditemukan.<br>
+
+5. **Keluar**<br>
+   Jika admin memilih Keluar, program menampilkan pesan **Kembali ke menu utama.** Kemudian admin keluar dari Menu Admin dan kembali ke Menu Utama.<br>
+
+## Alur Menu User
+
+Setelah user berhasil login, program akan menampilkan **Menu User** yang memiliki dua pilihan:<br>
+
+1. **Lihat Data Reservasi Pasien**<br>
+   User dapat melihat data reservasi pasien yang sudah tersimpan. Data ditampilkan berdasarkan urutan hari/tanggal dan jam dalam bentuk tabel. Setelah selesai melihat data, user kembali ke Menu User.<br>
+
+2. **Keluar**<br>
+   Jika user memilih Keluar, program menampilkan pesan **Kembali ke menu utama.** Kemudian user keluar dari Menu User dan kembali ke Menu Utama.<br>
+
+## Kesimpulan Alur
+
+Secara keseluruhan, program dimulai dari Menu Utama yang memberikan pilihan untuk masuk sebagai **Admin, User, atau Keluar**.<br>
+
+Admin dan User harus melakukan login terlebih dahulu sebelum masuk ke menu masing-masing.<br>
+
+Admin memiliki akses lebih lengkap untuk **menambah, melihat, mengubah, dan menghapus data reservasi pasien**, sedangkan User hanya memiliki akses untuk **melihat data reservasi pasien**.<br>
+
+Setelah selesai menggunakan Menu Admin atau Menu User, pengguna dapat kembali ke Menu Utama.<br>
+
+Program baru benar-benar berhenti jika pengguna memilih **Keluar** pada Menu Utama.<br>
+
 # PENJELASAN KODE PROGRAM
 
 # **1.IMPORT LIBRARY**
@@ -754,6 +854,9 @@ Menu USER memiliki pilihan yaitu:<br>
 **- TAMPILAN JIKA KELUAR DARI MENU USER DAN KEMBALI KE MENU AWAL**
 
 > <img width="230" height="224" alt="kembali di menu utama dari dalam user" src="https://github.com/user-attachments/assets/af1904d6-8202-489b-9a6f-c0548233c8d1" />
+
+
+
 
 
 
