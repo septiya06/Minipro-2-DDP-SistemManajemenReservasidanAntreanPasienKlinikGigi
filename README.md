@@ -654,9 +654,13 @@ Menu admin memiliki beberapa pilihan yaitu:
 
 ><img width="269" height="172" alt="ubah pakai nama berhasil" src="https://github.com/user-attachments/assets/c647a6c4-8c21-4740-aa55-497804d14f2b" />
 
-- TAMPILAN GAGAL UBAH DATA PASIEN MENGGUNAKANNO HP
+- TAMPILAN GAGAL UBAH DATA PASIEN MENGGUNAKAN NO HP
 
+  > <img width="298" height="137" alt="ubah pakai no hp gagal" src="https://github.com/user-attachments/assets/7af1a50f-a744-4a92-bf06-e7e3f483ddef" />
+  
 - TAMPILAN BERHASIL UBAH DATA PASIEN MENGGUNAKAN NOMOR HP
+
+  > <img width="297" height="181" alt="ubah berhasil no hp" src="https://github.com/user-attachments/assets/20bec6aa-e00c-432b-be43-d20c88ce580c" />
 
 - TAMPILAN PILIH MENU UBAH DATA 1-4 GAGAL<br>
   > <img width="345" height="272" alt="hasil menu di dalam ubah dan salah input nomor" src="https://github.com/user-attachments/assets/6655f3ec-6cec-4801-b27b-3bcb2d078984" />
@@ -691,11 +695,12 @@ Jika memilih menu 4, admin dapat memilih cara mencari data pasien yang ingin dih
 
 
 - TAMPILAN GAGAL HAPUS DATA PASIEN MENGGUNAKAN NOMOR HP
-  > <img width="298" height="137" alt="ubah pakai no hp gagal" src="https://github.com/user-attachments/assets/7af1a50f-a744-4a92-bf06-e7e3f483ddef" />
-  
-- TAMPILAN BERHASIL HAPUS DATA PASIEN MENGGUNAKAN NOMOR HP<br>
-  > <img width="297" height="181" alt="ubah berhasil no hp" src="https://github.com/user-attachments/assets/20bec6aa-e00c-432b-be43-d20c88ce580c" />
 
+ > <img width="400" height="140" alt="gagal hapus pake no" src="https://github.com/user-attachments/assets/3eec00fe-0b54-4f73-80dd-f6baa46d2919" />
+
+- TAMPILAN BERHASIL HAPUS DATA PASIEN MENGGUNAKAN NOMOR HP<br>
+
+> <img width="404" height="135" alt="berhasil hapus no" src="https://github.com/user-attachments/assets/4cdeeb34-a449-49f2-a9e8-56f5ceb2342f" />
 
 - TAMPILAN PILIH MENU HAPUS DATA 1-4 GAGAL<br>
 > <img width="286" height="280" alt="salah pilih no di menu hapus" src="https://github.com/user-attachments/assets/308b4757-f7c2-4967-8011-881808878560" />
