@@ -4,9 +4,19 @@
 **NIM   : 101**
 
 
+# Deskripsi Singkat Program
 
+Program ini merupakan program reservasi pasien pada klinik gigi dengan nama DRG.SEPTIYA. Program dibuat untuk membantu mengelola data reservasi pasien yang terdiri dari nama pasien, nomor HP, keluhan, hari/tanggal reservasi, dan jam reservasi.
 
-# PENJELASAN PROGRAM
+Program memiliki dua jenis pengguna, yaitu admin dan user. Sebelum masuk ke dalam program, pengguna harus melakukan login menggunakan username dan password sesuai dengan aksesnya. Admin memiliki akses penuh untuk menambah, melihat, mengubah, dan menghapus data reservasi pasien. Sedangkan user hanya memiliki akses untuk melihat data reservasi pasien.
+
+Pada bagian ubah dan hapus data, admin dapat mencari data pasien menggunakan nomor antrean, nama pasien, atau nomor HP. Data reservasi ditampilkan berdasarkan urutan hari/tanggal dan jam. Program juga menggunakan validasi input agar pilihan yang dimasukkan sesuai dengan menu yang tersedia serta menggunakan error handling agar kesalahan input tertentu tidak langsung menghentikan program.
+
+Program ini menggunakan Dictionary untuk menyimpan data akun dan data pasien, Function untuk membagi program menjadi beberapa bagian, serta beberapa library Python yaitu os, time, pwinput, dan PrettyTable.
+
+# GAMBAR FLOWCHART SERTA PENJELASAN ALURNYA
+
+# PENJELASAN KODE PROGRAM
 
 # **1.IMPORT LIBRARY**
 > <img width="251" height="71" alt="IMPORT" src="https://github.com/user-attachments/assets/0dc2f9c8-e551-4774-b2fb-307a840678d6" />
@@ -569,23 +579,36 @@ ADA MENU:
      
 > <img width="219" height="187" alt="tampilan awal program" src="https://github.com/user-attachments/assets/91eaba34-538e-477b-9279-c4d8b742aa3f" />
 
-# **2.JIKA MEMILIH ADMIN AKAN MENAMPILKAN USER UNTUK ADMIN**
+# **2.MENU ADMIN**
+
+Jika memilih ADMIN pada menu utama, program akan meminta username dan password untuk login sebagai admin.
 
 **- TAMPILAN JIKA LOGIN ADMIN GAGAL**
+
+Jika username atau password yang dimasukkan salah, program akan menampilkan pesan bahwa username atau password salah dan pengguna diminta untuk mencoba lagi.
 
 > <img width="302" height="257" alt="pilih menu admin dan password salah" src="https://github.com/user-attachments/assets/2a1dc161-d446-4c0f-ae35-7c9bd32aa912" />
 
 **- TAMPILAN JIKA LOGIN ADMIN BERHASIL**
 
+Jika username dan password yang dimasukkan benar, program akan menampilkan pesan login berhasil.
+
 > <img width="190" height="227" alt="pilih menu admin dan login berhasil" src="https://github.com/user-attachments/assets/d2e1f2f2-38ab-420e-bbb4-71d9242506e1" />
 
-(Jika berhasil login program akan menunggu 3 detik kemudian layar bersih dan akan menampilkan menu-menu yang ada di user)
+(Setelah berhasil login, program akan menunggu selama 3 detik kemudian layar dibersihkan dan menampilkan menu admin)
 
 **- TAMPILAN MENU-MENU YANG ADA DI DALAM MENU ADMIN**
 
+Menu admin memiliki beberapa pilihan yaitu:
+- Tambah Data Reservasi Pasien
+- Lihat Data Reservasi Pasien
+- Ubah Jadwal Reservasi Pasien
+- Hapus Data Reservasi Pasien
+- Keluar
+
 > <img width="221" height="194" alt="tampilan menu admin,dan ke clear karena pake os" src="https://github.com/user-attachments/assets/0628f643-3a77-4f3a-907c-e033dd78b203" />
 
-**- JIKA MEMILIH MENU 1 (TAMBAH DATA RESERVASI PASIEN) DAN MENAMBAHKAN DATA PASIEN 1**
+**- JIKA MEMILIH MENU 1 (TAMBAH DATA RESERVASI PASIEN) DAN MENAMBAHKAN DATA PASIEN 1/BERHASIL MENAMBAHKAN DATA PASIEN**
 
 <img width="257" height="273" alt="pilih menu 1 dan nambah pasien1" src="https://github.com/user-attachments/assets/068df3f1-9fb4-4c57-a4da-77d29e536c31" />
 
@@ -598,15 +621,136 @@ ADA MENU:
 > <img width="241" height="272" alt="tambah pasien 4" src="https://github.com/user-attachments/assets/c2515ead-b04a-4633-b4fb-d883440c22ab" />
 
 **- JIKA MEMILIH MENU 1 (TAMBAH DATA RESERVASI PASIEN) DAN MENAMBAHKAN DATA PASIEN GAGAL/TIDAK LENGKAP**
-> 
 
-**- JIKA MEMILIH MENU 2 (LIHAT DATA RESERVASI PASIEN)DAN HASIL DARI LIHAT DATA PASIEN**
+<img width="249" height="250" alt="jika tidak memasukkan data pasien dengan lengkap" src="https://github.com/user-attachments/assets/7c648cd6-3a12-41f9-b525-8c99112124d2" />
+
+
+**- JIKA MEMILIH MENU 2 (LIHAT DATA RESERVASI PASIEN)DAN HASIL DARI LIHAT DATA PASIEN BERHASIL**
 
 > <img width="526" height="326" alt="hasil lihat pasien" src="https://github.com/user-attachments/assets/71a3b1d4-6c7c-4011-8832-70bd1c19773d" />
 
 **- JIKA MEMILIH MENU 3 (UBAH DATA RESERVASI PASIEN)DAN HASIL DARI PILIHAN UBAH DATA PASIEN**
-  ADA 4 MENU DI DALAM UBAH DATA RESERVASI PASIEN:
-  - 1.UBAH 
+  Jika memilih menu 3, admin dapat memilih cara mencari data pasien yang ingin diubah, yaitu berdasarkan:
+- Nomor Antrean
+- Nama Pasien
+- Nomor HP
+- Kembali
+  
+> <img width="244" height="250" alt="menu di dalam ubah jadwal" src="https://github.com/user-attachments/assets/cf90cf9c-010b-478b-bbb5-854b20e44281" />
+
+- TAMPILAN GAGAL UBAH DATA PASIEN MENGGUNAKAN NOMOR ANTRIAN
+
+> <img width="275" height="287" alt="gagal ubah basien pakai no antrian" src="https://github.com/user-attachments/assets/d5bd6f62-ed90-421e-ab93-8332744b155c" />
+
+- TAMPILAN BERHASIL UBAH DATA PASIEN MENGGUNAKAN NOMOR ANTRIAN
+
+> <img width="256" height="178" alt="ubah pakai no antrian berhasil" src="https://github.com/user-attachments/assets/76a8c369-b785-4149-9401-813fc6b34aed" />
+
+- TAMPILAN GAGAL UBAH DATA PASIEN MENGGUNAKAN NAMA PASIEN
+
+  > <img width="239" height="143" alt="ubah pasien pakai nama gagal" src="https://github.com/user-attachments/assets/a1629c5e-e751-44ab-aa20-1f03e3b18122" />
+
+- TAMPILAN BERHASIL UBAH DATA PASIEN MENGGUNAKAN NAMA PASIEN
+
+><img width="269" height="172" alt="ubah pakai nama berhasil" src="https://github.com/user-attachments/assets/c647a6c4-8c21-4740-aa55-497804d14f2b" />
+
+- TAMPILAN GAGAL UBAH DATA PASIEN MENGGUNAKANNO HP
+
+- TAMPILAN BERHASIL UBAH DATA PASIEN MENGGUNAKAN NOMOR HP
+
+- TAMPILAN PILIH MENU UBAH DATA 1-4 GAGAL<br>
+  > <img width="345" height="272" alt="hasil menu di dalam ubah dan salah input nomor" src="https://github.com/user-attachments/assets/6655f3ec-6cec-4801-b27b-3bcb2d078984" />
+
+- TAMPILAN BERHASIL KELUAR DARI MENU UBAH DAN KEMBALI KE MENU UTAMA ADMIN<br>
+  > <img width="257" height="272" alt="kembali ke menu utama saat di dalam ubah" src="https://github.com/user-attachments/assets/ed5c2fcd-05e7-4892-86ec-22d1669a28ee" />
+
+- TAMPILAN DARI HASIL MELIHAT DATA RESERVASI SETELAH DIUBAH<br>
+  > <img width="491" height="320" alt="lihat data setelah di ubah datanya" src="https://github.com/user-attachments/assets/6d79987e-65ce-4bd2-95e4-4718df211d9c" />
+
+
+**- JIKA MEMILIH MENU 4 (HAPUS DATA RESERVASI PASIEN) DAN HASIL DARI PILIHAN HAPUS DATA PASIEN**
+
+Jika memilih menu 4, admin dapat memilih cara mencari data pasien yang ingin dihapus, yaitu berdasarkan:<br>
+- Nomor Antrean
+- Nama Pasien
+- Nomor HP
+- Kembali
+
+
+- TAMPILAN GAGAL HAPUS DATA PASIEN MENGGUNAKAN NOMOR ANTRIAN
+  > <img width="287" height="239" alt="hapus pake no antrian gagal" src="https://github.com/user-attachments/assets/02370a55-4ec9-40d5-8b64-c344bddcf802" />
+
+- TAMPILAN BERHASIL HAPUS DATA PASIEN MENGGUNAKAN NOMOR ANTRIAN
+  > <img width="248" height="173" alt="hapus pakai no antrian berhasil" src="https://github.com/user-attachments/assets/ea8a3943-48a1-4b05-9a5e-e42e9757ec79" />
+
+- TAMPILAN GAGAL HAPUS DATA PASIEN MENGGUNAKAN NAMA PASIEN
+  > <img width="256" height="139" alt="gagal hapus pake nama pasien" src="https://github.com/user-attachments/assets/8795d6ac-b821-4ecd-9409-70bd541b663e" />
+
+- TAMPILAN BERHASIL HAPUS DATA PASIEN MENGGUNAKAN NAMA PASIEN
+  > <img width="263" height="138" alt="hapus pakai nama pasien berhasil" src="https://github.com/user-attachments/assets/8aa43f9d-dc8d-4f80-a944-073cbeca1b24" />
+
+
+- TAMPILAN GAGAL HAPUS DATA PASIEN MENGGUNAKAN NOMOR HP
+  
+- TAMPILAN BERHASIL HAPUS DATA PASIEN MENGGUNAKAN NOMOR HP
+
+- TAMPILAN PILIH MENU HAPUS DATA 1-4 GAGAL<br>
+> <img width="286" height="280" alt="salah pilih no di menu hapus" src="https://github.com/user-attachments/assets/308b4757-f7c2-4967-8011-881808878560" />
+
+- TAMPILAN BERHASIL KELUAR DARI MENU HAPUS DAN KEMBALI KE MENU UTAMA ADMIN<br>
+> <img width="254" height="128" alt="kembali ke menu dalam hapus" src="https://github.com/user-attachments/assets/99340f34-aef7-4a94-8f8f-1f909fd31f39" />
+
+
+- TAMPILAN DARI HASIL MELIHAT DATA RESERVASI SETELAH DIUBAH<br>
+
+# **GAGAL MEMILIH MENU UTAMA ADMIN 1-5**<br>
+> <img width="337" height="330" alt="gagal pilih menu 1-5" src="https://github.com/user-attachments/assets/d3750a6d-0b76-45e9-8314-805eb6644c25" />
+
+# **BERHASIL KELUAR DARI PROGRAM (MEMILIH MENU 5.KEMBALI) DAN KEMBALI KE MENU UTAMA**
+
+# **3.MENU USER**
+
+Jika memilih USER pada menu utama, program akan meminta username dan password untuk login sebagai USER.
+
+**- TAMPILAN JIKA LOGIN USER GAGAL**
+
+> <img width="371" height="272" alt="user salah" src="https://github.com/user-attachments/assets/e1b611d6-9e1b-4706-bfee-ce70a78a8cbc" />
+
+Jika username atau password yang dimasukkan salah, program akan menampilkan pesan bahwa username atau password salah dan pengguna diminta untuk mencoba lagi.
+
+**- TAMPILAN JIKA LOGIN USER BERHASIL**
+
+Jika username dan password yang dimasukkan benar, program akan menampilkan pesan login berhasil.
+
+**- TAMPILAN MENU-MENU YANG ADA DI DALAM MENU ADMIN**
+
+Menu USER memiliki pilihan yaitu:<br>
+- Lihat Data Reservasi Pasien
+- Keluar
+
+> <img width="230" height="128" alt="tampilan di dalam user" src="https://github.com/user-attachments/assets/c8bcd257-ee8e-45c7-a81e-f12e29667588" />
+
+(Setelah berhasil login, program akan menunggu selama 3 detik kemudian layar dibersihkan dan menampilkan menu USER)
+
+**- TAMPILAN JIKA MEMILIH MENU 1 LIHAT DATA PASIEN**
+> <img width="530" height="248" alt="lihat data di user" src="https://github.com/user-attachments/assets/04cf3de3-b11e-4f6c-b34d-022fa90a8ad7" />
+
+**- TAMPILAN JIKA SALAH MEMILIH MENU 1-2 DI USER**
+
+> <img width="352" height="260" alt="salah pilih menu 1-2 di user" src="https://github.com/user-attachments/assets/f12a6940-e4f8-4350-a6c7-7b6aedfd768c" />
+
+**- TAMPILAN JIKA KELUAR DARI MENU USER DAN KEMBALI KE MENU AWAL**
+
+> <img width="230" height="224" alt="kembali di menu utama dari dalam user" src="https://github.com/user-attachments/assets/af1904d6-8202-489b-9a6f-c0548233c8d1" />
+
+
+
+
+
+
+
+
+
 
 
 
