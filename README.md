@@ -716,6 +716,8 @@ Jika memilih menu 4, admin dapat memilih cara mencari data pasien yang ingin dih
 
 # **BERHASIL KELUAR DARI PROGRAM (MEMILIH MENU 5.KEMBALI) DAN KEMBALI KE MENU UTAMA**
 
+> <img width="217" height="340" alt="keluar program 5" src="https://github.com/user-attachments/assets/c5045c78-1c27-492e-ada5-4ee9aba01b12" />
+
 # **3.MENU USER**
 
 Jika memilih USER pada menu utama, program akan meminta username dan password untuk login sebagai USER.
@@ -727,6 +729,8 @@ Jika memilih USER pada menu utama, program akan meminta username dan password un
 Jika username atau password yang dimasukkan salah, program akan menampilkan pesan bahwa username atau password salah dan pengguna diminta untuk mencoba lagi.
 
 **- TAMPILAN JIKA LOGIN USER BERHASIL**
+
+> <img width="202" height="226" alt="user berhasil" src="https://github.com/user-attachments/assets/ae79212c-a859-40ca-8a20-96067011c578" />
 
 Jika username dan password yang dimasukkan benar, program akan menampilkan pesan login berhasil.
 
